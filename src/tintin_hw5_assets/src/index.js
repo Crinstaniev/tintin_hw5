@@ -2,8 +2,8 @@ import { tintin_hw5, idlFactory } from '../../declarations/tintin_hw5';
 import { Principal } from '@dfinity/principal';
 import { Actor, HttpAgent } from '@dfinity/agent';
 
-var num_posts = 0;
-var num_followed = 0;
+var num_posts = -1;
+var num_followed = -1;
 
 let to_time = (target) => {
   const temp = Number(target) / 1000000;
