@@ -66,16 +66,6 @@ actor {
         return List.toArray(payload);
     };
 
-    public shared func _call_get_name(principal: Principal) : async ?Text {
-        let canister : Microblog = actor(Principal.toText(principal));
-        return await canister.get_name();
-    };
-
-    public shared func _call_posts(principal: Principal, since : Time.Time) : async [Message] {
-        let canister : Microblog = actor(Principal.toText(principal));
-        return await canister.posts(since);
-    };
-
     public shared func timeline(since : Time.Time) : async [Message] {
         var all : List.List<Message> = List.nil();
 
